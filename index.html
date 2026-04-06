@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Алан Тьюринг – образовательный сайт</title>
+<title>Алан Тьюринг - Образовательный сайт</title>
 <style>
 :root {
     --bg-color: #f0f2f5;
@@ -15,7 +15,6 @@
     --footer-text: white;
 }
 
-/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -24,18 +23,24 @@ body {
     scroll-behavior: smooth;
     transition: all 0.4s ease;
 }
-header, footer {
-    text-align: center;
-    padding: 50px 20px;
+
+header {
     background: var(--header-bg);
     color: var(--header-text);
+    text-align: center;
+    padding: 50px 20px;
+    transition: all 0.4s ease;
 }
+
 nav {
     position: sticky;
     top: 0;
     background: var(--nav-bg);
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.4s ease;
 }
+
 nav ul {
     list-style: none;
     display: flex;
@@ -43,9 +48,11 @@ nav ul {
     margin: 0;
     padding: 0;
 }
+
 nav ul li {
     margin: 0 15px;
 }
+
 nav a {
     color: white;
     text-decoration: none;
@@ -53,51 +60,99 @@ nav a {
     display: block;
     border-radius: 5px;
     transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
 }
+
 nav a:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     transform: translateY(-2px);
 }
+
 section {
     padding: 60px 20px;
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto;
 }
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+p, li {
+    line-height: 1.6;
+}
+
 img {
     display: block;
     margin: 20px auto;
     max-width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
+
 img:hover {
     transform: scale(1.05);
 }
-#topBtn, #themeToggle {
+
+#topBtn {
     position: fixed;
-    padding: 12px 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
+    bottom: 30px;
+    right: 30px;
     background: #222;
     color: white;
+    border: none;
+    padding: 15px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
     transition: all 0.3s ease;
 }
-#topBtn { bottom: 30px; right: 30px; display: none; }
-#themeToggle { bottom: 30px; left: 30px; }
-#topBtn:hover, #themeToggle:hover {
+
+#topBtn:hover {
     background: #555;
     transform: translateY(-2px);
 }
+
+#themeToggle {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: #222;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+    background: #555;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    margin-top: 40px;
+    transition: all 0.4s ease;
+}
+
 body.dark-theme {
     --bg-color: #1c1c1c;
     --text-color: #f0f0f0;
     --header-bg: #111;
+    --header-text: #f0f0f0;
     --nav-bg: #222;
     --nav-hover: #444;
     --footer-bg: #111;
+    --footer-text: #f0f0f0;
 }
 </style>
 </head>
@@ -120,48 +175,54 @@ body.dark-theme {
 
 <section id="home">
     <h2>Введение</h2>
-    <p>Алан Тьюринг (1912–1954) — британский математик, логик и учёный, чьи идеи определили основы современной информатики и искусственного интеллекта.</p>
-    <p>Его исследования охватывают теорию алгоритмов, криптографию и вычислительные машины, которые впоследствии стали прообразом цифровых компьютеров.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg" alt="Алан Тьюринг в молодости"> <!-- Фото 16 лет (публичное)  [oai_citation:1‡Wikimedia Commons](https://commons.m.wikimedia.org/wiki/File%3AAlan_Turing_Aged_16.jpg?utm_source=chatgpt.com) -->
+    <p>Алан Тьюринг (1912–1954) — британский математик, логик и учёный в области компьютерных наук, чьи работы заложили основу современного программирования и вычислительной техники. Он предложил ключевые концепции алгоритмов и машинного интеллекта.</p>
+    <p>Его достижения включают как теоретические исследования, так и практические решения в криптографии и ранние разработки вычислительных машин. Сегодня Тьюринг считается визионером, который изменил технологию и науку.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg" alt="Алан Тьюринг">
 </section>
 
 <section id="biography">
     <h2>Биография</h2>
-    <p>Родился в Лондоне в 1912 году. С детства проявлял способности к математике и логике, учился в Кембридже и Принстоне. В годы Второй мировой войны работал в Блетчли‑Парке, где участвовал в расшифровке шифра “Энигма”.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Alan_Turing_%281951%29.jpg" alt="Портрет Тьюринга, 1951 год"> <!-- Портрет из 1951 г. (свободен)  [oai_citation:2‡Wikimedia Commons](https://commons.m.wikimedia.org/wiki/File%3AAlan_Turing_%281951%29.jpg?utm_source=chatgpt.com) -->
+    <p>Алан Тьюринг родился в Лондоне в 1912 году. С детства проявлял выдающиеся способности к математике и логике. Он учился в Кембриджском университете, а затем в Принстоне, где занимался исследованием математической логики и вычислимости.</p>
+    <p>Во время Второй мировой войны Тьюринг работал в Блетчли-Парке, где сыграл ключевую роль в расшифровке кодов немецкой машины «Энигма». Несмотря на свои достижения, он подвергся преследованиям из-за своей сексуальной ориентации, что привело к его преждевременной смерти в 1954 году.</p>
+    <img src="https://collectionimages.npg.org.uk/large/mw165875/Alan-Turing.jpg" alt="Алан Тьюринг, портрет">
     <ol>
         <li>1912 — рождение в Лондоне</li>
-        <li>1936 — концепция машины Тьюринга</li>
-        <li>1939 — начало работы по дешифровке</li>
-        <li>1940–1945 — основная работа над Энигмой</li>
-        <li>1950 — тест Тьюринга</li>
+        <li>1936 — предложил концепцию машины Тьюринга</li>
+        <li>1939 — вступил в британскую команду по расшифровке кодов</li>
+        <li>1940–1945 — работал над расшифровкой Энигмы</li>
+        <li>1950 — создал тест Тьюринга для искусственного интеллекта</li>
     </ol>
 </section>
 
 <section id="inventions">
     <h2>Научные работы</h2>
-    <p>Тьюринг создал теоретическую модель вычислительной машины — <strong>машину Тьюринга</strong>, которая описывает, как алгоритмы выполняются шаг за шагом и является базой для всех компьютеров.</p>
-    <p>Он также разработал методы и устройства для ускорения взлома кодов военного времени, что спасло множество жизней.</p>
+    <p>Одним из важнейших вкладов Тьюринга является концепция <strong>машины Тьюринга</strong> — теоретической модели вычислительного процесса, которая показывает, как алгоритмы могут выполняться машинами. Эта идея легла в основу всех современных компьютеров.</p>
+    <p>Во время войны он также разработал <strong>машину Bombe</strong> для расшифровки сообщений, закодированных немецкой «Энигмой». Этот вклад спас множество жизней и ускорил завершение войны.</p>
+    <img src="https://www.lapl.org/sites/default/files/blogs/2021-06/alan-turing.jpg" alt="Алан Тьюринг в архиве">
+    <p>Исследования Тьюринга оказали влияние на дизайн алгоритмов, криптографию и развитие цифровых вычислительных машин, соединяя теорию с практическими технологиями.</p>
 </section>
 
 <section id="impact">
     <h2>Влияние на информатику</h2>
-    <p>Идеи Тьюринга породили основу для анализа алгоритмов, теории вычислений и исследований искусственного интеллекта. Его “тест Тьюринга” остаётся культурным и научным стандартом в оценке поведения машин.</p>
+    <p>Работы Тьюринга создали основу для информатики как науки. Современное программирование, анализ алгоритмов и исследования искусственного интеллекта ведут своё начало от его идей.</p>
+    <p>Тест Тьюринга, созданный в 1950 году, до сих пор используется для оценки способности машин проявлять интеллектуальное поведение, сравнимое с человеческим.</p>
+    <p>Его наследие продолжает вдохновлять новые разработки в вычислительной технике, робототехнике и AI, делая Тьюринга одним из самых влиятельных учёных XX века.</p>
 </section>
 
 <section id="facts">
     <h2>Интересные факты</h2>
     <ul>
         <li>Считается отцом компьютерных наук</li>
-        <li>Ключевой вклад в расшифровку “Энигмы”</li>
-        <li>Тест Тьюринга используется в AI</li>
-        <li>Современные компьютеры основаны на его идеях</li>
-        <li>Его имя носит престижная премия Turing Award</li>
+        <li>Играл ключевую роль в расшифровке «Энигмы»</li>
+        <li>Создал тест Тьюринга для AI</li>
+        <li>Современные компьютеры основаны на принципах машины Тьюринга</li>
+        <li>Посмертно удостоен Орденом Британской Империи</li>
+        <li>Премия Тьюринга — самая престижная награда в области компьютерных наук — названа в его честь</li>
     </ul>
 </section>
 
 <button id="topBtn" onclick="scrollToTop()">↑ Наверх</button>
-<button id="themeToggle" onclick="toggleTheme()">🌙 Тема</button>
+<button id="themeToggle" onclick="toggleTheme()">🌙 Темная/Светлая</button>
 
 <footer>
     <p>Образовательный сайт об Аллане Тьюринге</p>
@@ -180,6 +241,7 @@ window.onscroll = function(){
 function scrollToTop(){
     window.scrollTo({top:0, behavior:'smooth'});
 }
+
 // Переключение темы
 function toggleTheme(){
     document.body.classList.toggle('dark-theme');
