@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alan Turing - Educational Website</title>
+<style>
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #222;
+    --header-bg: #222;
+    --header-text: white;
+    --nav-bg: #333;
+    --nav-hover: #555;
+    --footer-bg: #222;
+    --footer-text: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    transition: all 0.4s ease;
+}
+
+header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    text-align: center;
+    padding: 50px 20px;
+    transition: all 0.4s ease;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: var(--nav-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+nav a:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+p, li {
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #222;
+    color: white;
+    border: none;
+    padding: 15px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+#topBtn:hover {
+    background: #555;
+    transform: translateY(-2px);
+}
+
+#themeToggle {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: #222;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+    background: #555;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    margin-top: 40px;
+    transition: all 0.4s ease;
+}
+
+body.dark-theme {
+    --bg-color: #1c1c1c;
+    --text-color: #f0f0f0;
+    --header-bg: #111;
+    --header-text: #f0f0f0;
+    --nav-bg: #222;
+    --nav-hover: #444;
+    --footer-bg: #111;
+    --footer-text: #f0f0f0;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Alan Turing</h1>
+    <p>The Father of Computer Science</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#biography">Biography</a></li>
+        <li><a href="#inventions">Inventions</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#facts">Facts</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <h2>Introduction</h2>
+    <p>Alan Turing (1912–1954) was a British mathematician, logician, and computer scientist whose work laid the foundation of modern computing. He introduced key concepts that define the limits of computation and pioneered ideas in artificial intelligence.</p>
+    <p>His achievements span theoretical work in algorithms, practical solutions in cryptography, and contributions to early computing machinery. Today, Turing is remembered as a visionary whose ideas transformed technology and science.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg" alt="Alan Turing">
+</section>
+
+<section id="biography">
+    <h2>Biography</h2>
+    <p>Alan Turing was born in London in 1912. From an early age, he showed extraordinary talent in mathematics and logical thinking. He studied at Cambridge University and later at Princeton, where he deepened his research in mathematical logic and computability.</p>
+    <p>During World War II, Turing joined the Government Code and Cypher School at Bletchley Park, where he played a key role in breaking German Enigma codes. Despite his groundbreaking contributions, he faced persecution due to his sexuality, which ultimately led to his untimely death in 1954.</p>
+    <ol>
+        <li>1912 – Born in London</li>
+        <li>1936 – Proposed the Turing Machine</li>
+        <li>1939 – Joined the British codebreaking team</li>
+        <li>1940–1945 – Worked on breaking the Enigma code</li>
+        <li>1950 – Created the Turing Test for artificial intelligence</li>
+    </ol>
+</section>
+
+<section id="inventions">
+    <h2>Scientific Work & Inventions</h2>
+    <p>Turing introduced the concept of the <strong>Turing Machine</strong>, a theoretical model of computation that defines the rules for algorithms and automates problem-solving. This concept forms the foundation of all modern computers.</p>
+    <p>He also designed the <strong>Bombe machine</strong>, which helped decrypt messages encoded by the German Enigma machine during World War II. This contribution saved countless lives and shortened the war.</p>
+    <p>His research influenced algorithm design, cryptography, and the development of digital computers, bridging the gap between theory and practical technology.</p>
+</section>
+
+<section id="impact">
+    <h2>Impact on Computer Science</h2>
+    <p>Turing’s work created the basis for computer science as a formal discipline. Modern programming, algorithm analysis, and machine intelligence research all trace roots to his ideas.</p>
+    <p>The Turing Test, developed in 1950, is a landmark concept in artificial intelligence, setting the standard for evaluating whether machines can exhibit intelligent behavior comparable to humans.</p>
+    <p>His legacy continues to inspire innovations in computing, AI, and robotics, making him one of the most influential scientists of the 20th century.</p>
+</section>
+
+<section id="facts">
+    <h2>Interesting Facts</h2>
+    <ul>
+        <li>Father of computer science</li>
+        <li>Played a crucial role in breaking Enigma</li>
+        <li>Created the Turing Test for AI</li>
+        <li>Modern computers are based on principles from the Turing Machine</li>
+        <li>Posthumously awarded the Order of the British Empire</li>
+        <li>The Turing Award, the most prestigious in CS, is named after him</li>
+    </ul>
+</section>
+
+<button id="topBtn" onclick="scrollToTop()">↑</button>
+<button id="themeToggle" onclick="toggleTheme()">🌙 Dark/Light</button>
+
+<footer>
+    <p>Educational Website about Alan Turing</p>
+</footer>
+
+<script>
+// --- Кнопка Наверх ---
+const topBtn = document.getElementById('topBtn');
+window.onscroll = function(){
+    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+};
+function scrollToTop(){
+    window.scrollTo({top:0, behavior:'smooth'});
+}
+
+// --- Переключение темы ---
+function toggleTheme(){
+    document.body.classList.toggle('dark-theme');
+}
+</script>
+
+</body>
+</html>
